@@ -1,4 +1,5 @@
+#
 FROM ubuntu:latest
 LABEL authors="khotv"
 
-ENTRYPOINT ["top", "-b"]
+ENTRYPOINT ["top", "- b"]

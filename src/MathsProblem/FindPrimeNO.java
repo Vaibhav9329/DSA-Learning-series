@@ -2,7 +2,7 @@ package MathsProblem;
 
 public class FindPrimeNO {
     public static void main(String[] args) {
-        int n=1093;
+        int n=10;
         for(int i=1;i<=n;i++){
             System.out.println(i+" "+isPrime(i));
         }

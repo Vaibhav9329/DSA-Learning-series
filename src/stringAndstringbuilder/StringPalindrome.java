@@ -2,22 +2,21 @@ package stringAndstringbuilder;
 
 public class StringPalindrome {
     public static void main(String[] args) {
-        String str = "abnba";
+        String str = "abcba";
         System.out.println(isPalindrome(str));
     }
 
     static boolean isPalindrome(String str){
-        if(str == null || str.length() == 0 ){
-            return true;
+        if(str == null || str == " "){
+            return false;
         }
 
+        str=str.toLowerCase();
+        for(int i=0;i<str.length()/2;i++){
+            char left = str.charAt(i);
+            char right = str.charAt(str.length()-1-i);
 
-        str = str.toLowerCase();
-        for(int i=0;i<=str.length()/2;i++){
-            char start = str.charAt(i);
-            char end = str.charAt(str.length()-1-i);
-
-            if(start != end){
+            if(left != right){
                 return false;
             }
         }

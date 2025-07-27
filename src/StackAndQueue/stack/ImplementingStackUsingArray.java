@@ -1,4 +1,4 @@
-package StackAndQueue;
+package StackAndQueue.stack;
 
 public class ImplementingStackUsingArray {
     int ele =-1;

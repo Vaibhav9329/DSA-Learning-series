@@ -2,7 +2,7 @@ package StringExample;
 
 public class CountNofVowelsConsonantsWhitespace {
     public static void main(String[] args) {
-        String s = "Take u forward is Awesome";
+        String s = "Take u forward is Awesome ";
 
         contVCWspace(s);
     }
@@ -13,12 +13,13 @@ public class CountNofVowelsConsonantsWhitespace {
         str = str.toLowerCase(); // converting given string to lowercase
         for (int i = 0; i < len; i++) {
             char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
                 vowels++;
-            else if (ch >= 'a' && ch <= 'z')
+            } else if (ch >= 'a' && ch <= 'z') {
                 consonants++;
-            else if (ch == ' ')
+            } else if ( ch == ' ') {
                 whitespaces++;
+            }
         }
         System.out.println("Vowels: " + vowels);
         System.out.println("Consonants: " + consonants);

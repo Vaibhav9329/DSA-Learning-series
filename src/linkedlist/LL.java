@@ -47,26 +47,26 @@ public class LL {
         size++;
     }
 
-//    public void insert(int val, int index) {
-//        if (index == 0) {
-//            insertFirst(val);
-//            return;
-//        }
-//        if (index == size) {
-//            insertLast(val);
-//            return;
-//        }
-//
-//        Node temp = head;
-//        for (int i = 1; i < index; i++) {
-//            temp = temp.next;
-//        }
-//
-//        Node node = new Node(val, temp.next);
-//        temp.next = node;
-//
-//        size++;
-//    }
+    public void insert(int val, int index) {
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+        if (index == size) {
+            insertLast(val);
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+
+        Node node = new Node(val, temp.next);
+        temp.next = node;
+
+        size++;
+    }
 
 //     insert using recursion
 //    public void insertRec(int val, int index) {
@@ -259,49 +259,50 @@ public class LL {
 
 //     in place reversal of linked list
 //     google, microsoft, apple, amazon: https://leetcode.com/problems/reverse-linked-list/
-//    public void reverse() {
-//        if (size < 2) {
-//            return;
-//        }
-//
-//        Node prev = null;
-//        Node present = head;
-//        Node next = present.next;
-//
-//        while (present != null) {
-//            present.next = prev;
-//            prev = present;
-//            present = next;
-//            if (next != null) {
-//                next = next.next;
-//            }
-//        }
-//        head = prev;
-//    }
+    public void reverse() {
+        if (size < 2) {
+            return;
+        }
+
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
 
 //            ---------- main method -------------------
     public static void main(String[] args) {
         LL first = new LL();
         LL second = new LL();
 
-//        first.insertFirst(1);
-//        first.insertFirst(2);
-//        first.insertFirst(3);
-//        first.insertFirst(4);
+        first.insertFirst(1);
+        first.insertFirst(2);
+        first.insertFirst(3);
+        first.insertFirst(4);
 //
 //      first.display();
-        first.insertLast(1);
-        first.insertLast(3);
-        first.insertLast(5);
-
-        second.insertLast(1);
-        second.insertLast(2);
+//        first.insertLast(1);
+//        first.insertLast(3);
+//        first.insertLast(5);
+//
+//        second.insertLast(1);
+//        second.insertLast(2);
         second.insertLast(9);
         second.insertLast(14);
 
         LL ans = LL.merge(first, second);
         ans.display();
-
+        ans.reverse();
+        ans.display();
 //        LL list = new LL();
 //        for (int i = 7; i > 0; i--) {
 //            list.insertLast(i);

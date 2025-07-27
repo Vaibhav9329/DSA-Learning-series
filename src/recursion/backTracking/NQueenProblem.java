@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NQueenProblem {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 5;
         boolean[][] board = new boolean[n][n];  // 4x4 chessboard
         System.out.println(queens(board, 0));   // Start placing queens from row 0
     }

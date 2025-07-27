@@ -17,7 +17,7 @@ public class NumberOfelementInarray {
     public static void main(String[] args) {
         int[] arr={1,2,2,2,2,2,2,2,3,4,5,6,7,2,8};
         ArrayList<Integer> list = new ArrayList<>();
-    //    System.out.println(findOccuranceOfEle(arr,0,2,new ArrayList<>()));
+       System.out.println(findOccuranceOfEle(arr,0,2,new ArrayList<>()));
         System.out.println(findOccuranceOfEle(arr,0,2,list));
     }
 

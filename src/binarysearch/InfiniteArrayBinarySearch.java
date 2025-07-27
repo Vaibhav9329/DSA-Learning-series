@@ -2,8 +2,8 @@ package binarysearch;
 
 public class InfiniteArrayBinarySearch {
     public static void main(String[] args) {
-        int[] arr={3,5,7,9,10,90,100,130,140,160,170,190,200,230,260,290,310,330};
-        int target = 110;
+        int[] arr={3,5,7,9,10,90,100,130,140,160,170,190,200,230,260,290,310,330,400,430,460,500,510,530,550,590,630};
+        int target = 230;
         System.out.println(findingRange(arr, target));
         }
         static int findingRange(int[] arr, int targrt){
@@ -35,7 +35,7 @@ public class InfiniteArrayBinarySearch {
                 return arr[mid];
             }
         }
-        return arr[start];
+        return start;
     }
 
 }

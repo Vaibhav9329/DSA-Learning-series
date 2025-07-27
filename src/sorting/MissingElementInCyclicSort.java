@@ -29,7 +29,7 @@ public class MissingElementInCyclicSort {
 
     public static void main(String[] args) {
 //        int[] arr={3,0,1};
-        int[] arr={9,5,4,2,3,0,1};
+        int[] arr={9,5,6,7,10,4,2,3,0,1};
         System.out.println(missingElement(arr));
     }
 }

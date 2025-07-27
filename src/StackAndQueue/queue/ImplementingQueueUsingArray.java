@@ -1,4 +1,4 @@
-package StackAndQueue;
+package StackAndQueue.queue;
 
 public class ImplementingQueueUsingArray {
     int size =10;

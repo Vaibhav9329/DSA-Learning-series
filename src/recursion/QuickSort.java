@@ -15,7 +15,7 @@ public class QuickSort {
         while (arr[start]<pivot){
             start++;
         }
-        while (arr[end]>pivot){
+         while (arr[end]>pivot){
             end--;
         }
         if(start <= end){
@@ -29,7 +29,7 @@ public class QuickSort {
     quickSort(arr,start,e);
     quickSort(arr,s,end);
     }
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         int[]arr={5,3,4,2,1};
         int start = 0;
         int end = arr.length-1;

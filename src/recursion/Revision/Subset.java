@@ -3,7 +3,8 @@ package recursion.Revision;
 import javax.xml.transform.Source;
 import java.util.ArrayList;
 
-public class Subset {
+public class
+Subset {
     public static void main(String[] args) {
         System.out.println('A'+0);
         subsetrevision("","abcd");

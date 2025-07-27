@@ -16,6 +16,6 @@ public class Dice {
         return nwlist;
     }
     public static void main(String[] args) {
-        System.out.println(dice("",6  ));
+        System.out.println(dice("",2  ));
     }
 }

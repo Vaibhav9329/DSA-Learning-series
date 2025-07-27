@@ -15,7 +15,7 @@ import java.util.Arrays;
 //Example 3:
 //Input: nums = [3,1,2,10,1]
 //Output: [3,4,6,16,17]
-public class git Sumof1DArray {
+public class  Sumof1DArray {
 
     public int[] runningSum(int[] nums){
         int start=1;

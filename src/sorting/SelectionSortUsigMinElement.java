@@ -9,6 +9,7 @@ public class SelectionSortUsigMinElement {
             int minpost = i;
             for(int j=i+1; j<arr.length; j++){
                 if(arr[minpost]>arr[j]){
+
                     minpost = j;
                 }
                 }

@@ -14,15 +14,12 @@ public class fibseries {
     static void fibseriesMethod(int n){
         int n1=0;
         int n2=1;
-        n -=2;
-        int temp=0;
-        System.out.print(n1+" "+n2+" ");
-        while(n>2){
-          temp = n1+n2;// 0+1=1
-            System.out.print(temp+" ");
+        for(int i = 0; i<n;i++){
+            System.out.print(n1+" ");
+
+            int n3 = n2+n1;
             n1=n2;
-            n2=temp;
-            n--;
+            n2=n3;
         }
 
     }

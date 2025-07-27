@@ -2,7 +2,7 @@ package recursion.Level1Question;
 
 public class SumOf_Digits   {
     public static void main(String[] args) {
-        System.out.println(sumOfDigit(122));
+        System.out.println(sumOfDigit(1252));
     }
     static int sumOfDigit(int n){
         if(n==0){

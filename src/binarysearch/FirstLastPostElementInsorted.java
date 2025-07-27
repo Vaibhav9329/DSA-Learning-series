@@ -31,7 +31,7 @@ public class FirstLastPostElementInsorted {
 
             if(target<nums[mid]) {
                 end = mid - 1;
-            }else if(target >nums[mid]) {
+            }else if(target > nums[mid]) {
                 start = mid + 1;
             }else {
                 ans =  mid;

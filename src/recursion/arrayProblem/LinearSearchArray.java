@@ -51,8 +51,16 @@ public class LinearSearchArray {
 //        allindexs(arr,target,ind+1);
 //    }
     static ArrayList<Integer> FindallIndex(int[] arr, int target,int ind, ArrayList<Integer> list){
+//        if(ind == arr.length){
+//            return  list;
+//        }
+//        if(arr[ind] == target){
+//            list.add(ind);
+//        }
+//        return FindallIndex(arr,target,ind+1,list);
+//
         if(ind == arr.length){
-            return  list;
+            return list;
         }
         if(arr[ind] == target){
             list.add(ind);
