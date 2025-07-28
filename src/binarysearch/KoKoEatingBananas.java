@@ -23,28 +23,28 @@ public class KoKoEatingBananas {
 
 
     public static int minEatingSpeed(int[] arr, int h) {
-        int low = 1;
-        int high = findmax(arr);
+       int low = 0;
+       int high = findmax(arr);
 
-        while (low <= high){
-            int mid = low+(high-low)/2;
-            int totalTime  = calTimetotalHour(arr,mid);
-            if(totalTime < h){
-                high = mid-1;
-            }else {
-                low = mid +1;
-            }
-        }
-        return low;
+       while (low < high){
+           int mid = low+(high - low)/2;
+           int reqtime = calTimetotalHour(arr,mid);
+           if(reqtime <= h){
+               high = mid - 1;
+           }else {
+               low = mid + 1;
+           }
+       }
+       return low;
     }
 
     static int calTimetotalHour(int[] arr, int hrs){
-        int totalh = 0;
-        int n = arr.length;
-        for(int i= 0;i<n;i++){
-            totalh += Math.ceil((double) arr[i] / (double) hrs  );
-        }
-        return totalh;
+       int totalHor =0;
+       int m =  arr.length;
+       for(int i=0;i<m;i++){
+           totalHor += Math.ceil((double) arr[i] / (double) hrs);
+       }
+       return totalHor;
     }
 
     static int findmax(int[] arr){

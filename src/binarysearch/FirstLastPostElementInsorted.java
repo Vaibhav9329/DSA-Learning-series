@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class FirstLastPostElementInsorted {
     public static void main(String[] args) {
-        int[] nums={3,6,7,7,7,7,7,8,8,10};
-        int target = 7;
+        int[] nums={3,6,6,6,6,6,6,6,6,6,8};
+        int target = 6;
         FirstLastPostElementInsorted sc=new FirstLastPostElementInsorted();
         System.out.println(Arrays.toString(sc.searchRange(nums,target)));
     }
@@ -13,38 +13,37 @@ public class FirstLastPostElementInsorted {
     int[] ans={-1,-1};
     //check for first occurrence if target first
         ans[0] = search(nums,target,true);
-        if(ans[0]!=-1) {
-            ans[1] = search(nums, target, false);
+        if(ans[0]!= -1){
+            ans[1] = search(nums,target,false);
         }
 
         return ans;
     }
 
         //This function index value of target
-    int search(int[] nums,int target,boolean findStartIndex){
+    public static int search(int[] arr, int tar, boolean fStartIndex){
         int ans =-1;
-        int start=0;
-        int end=nums.length-1;
-                int mid ;
-        while (start<=end){
-            mid = (start+end)/2;
+        int start =0;
+        int end = arr.length-1;
 
-            if(target<nums[mid]) {
-                end = mid - 1;
-            }else if(target > nums[mid]) {
+        while (start <= end){
+            int mid = start +(end - start)/2;
+            if(arr[mid] <tar){
                 start = mid + 1;
-            }else {
-                ans =  mid;
-                if(findStartIndex){
+            } else if (arr[mid] > tar) {
+                end = mid - 1;
+            }else{
+                ans = mid;
+                if(fStartIndex){
                     end = mid-1;
+                }else{
+                    start = mid+1;
                 }
-                else {
-                    start = mid +1;
-                }
-
+            }
         }
-
-    }return ans;
+        return ans;
     }
+
+
 }
 

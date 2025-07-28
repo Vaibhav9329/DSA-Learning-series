@@ -1,4 +1,4 @@
-package array;
+package binarysearch;
 
 public class FindSmallDivisorGivenThreshold {
     public static void main(String[] args) {
@@ -38,7 +38,8 @@ public class FindSmallDivisorGivenThreshold {
             maxi = Math.max(arr[i],maxi);
         }
 
-        int low=1 , high = maxi;
+        int low = 1 , high = maxi;
+
         while(low <= high){
             int mid = low+(high - low)/2;
             if(sumBydiv(arr,mid) <= threshold){

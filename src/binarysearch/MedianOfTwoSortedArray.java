@@ -12,39 +12,42 @@ public class MedianOfTwoSortedArray {
     }
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-     int n= nums1.length;
-     int m= nums2.length;
+        int left = nums1.length;
+        int right = nums2.length;
 
-     int[] arr = new int[n+m];
-     int i=0 , j=0, k=0;
-     while(i<n && j<m){
-         if(nums1[i] < nums2[j]){
-             arr[k] = nums1[i];
-             i++;
-             k++;
-         }else {
-             arr[k] = nums2[j];
-             j++;
-             k++;
-         }
-     }
-     while (i<n){
-         arr[k]=nums1[i];
-         i++;
-         k++;
-     }
-     while (j<m){
-         arr[k] = nums2[j];
-         j++;
-         k++;
-     }
-     int sum=n+m;
-     if(sum%2 == 1){
-         double med = (double) arr[sum/2];
-         return med;
-     }
-     double median = ((double) arr[sum/2]+(double) arr[(sum/2)-1])/2.0;
-     return median;
+        int[] arr = new int[left + right];
+        int i=0,j=0,k=0;
+
+        while (i<left &&  j<right){
+            if(nums1[i] < nums2[j]){
+                arr[k] = nums1[i];
+                i++;
+                k++;
+            }else {
+                arr[k] = nums2[j];
+                j++;
+                k++;
+            }
+        }
+
+        while (i<left){
+            arr[k] = nums1[i];
+            i++;
+            k++;
+        }
+        while (j<right){
+            arr[k] = nums2[j];
+            j++;
+            k++;
+        }
+
+        int sum = left+right;
+        if(sum %2 == 1){
+            return ((double) arr[sum/2]);
+        }
+
+        double median = ((double) arr[sum/2] + (double) arr[(sum/2)-1])/2.0;
+        return median;
     }
 
 
