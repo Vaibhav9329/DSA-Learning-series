@@ -8,24 +8,25 @@ public class DuplElementInArray {
 
     static List<List<Integer>> SubsetWithDuplicate(int[] arr){
         Arrays.sort(arr);
-        List<List<Integer>> outerlist = new ArrayList<>();
-        outerlist.add(new ArrayList<>());
-        int start = 0;
-        int end = 0;
-        for(int i=0;i<arr.length;i++){
+        List<List<Integer>> outerlst = new ArrayList<>();
+        outerlst.add(new ArrayList<>());
 
+        int s =0,e=0;
+        for(int i=s;i<arr.length;i++){
+            s=0;
             if(i>0 && arr[i] == arr[i-1]){
-                start = end+1;
+                s = e +1;
             }
-            end = outerlist.size()-1;
-            int n = outerlist.size();
-            for(int j=start; j<n;j++){
-                List<Integer> interalList = new ArrayList<>(outerlist.get(j));
-                interalList.add(arr[i]);
-                outerlist.add(interalList);
+            e = outerlst.size()-1;
+            int size = outerlst.size();
+            for(int j=s;j<size;j++){
+                List<Integer> innerlst = new ArrayList<>(outerlst.get(j));
+                innerlst.add(arr[i]);
+                outerlst.add(innerlst);
+
             }
         }
-        return outerlist;
+        return outerlst;
     }
 
     static List<List<Integer>> subSetWithDuplicates(int[ ] arr){
@@ -52,14 +53,14 @@ public class DuplElementInArray {
 
 
     public static void main(String[] args) {
-    int[] arr={1,2,2};
-//       List<List<Integer>> ans = SubsetWithDuplicate(arr);
-//       for(List<Integer> list : ans) {
-//           System.out.println(list);
-//       }
-       List<List<Integer>>  asns = subSetWithDuplicates(arr);
-       for (List<Integer> list : asns){
+    int[] arr={1,3,2,2};
+       List<List<Integer>> ans = SubsetWithDuplicate(arr);
+       for(List<Integer> list : ans) {
            System.out.println(list);
        }
+//       List<List<Integer>>  asns = subSetWithDuplicates(arr);
+//       for (List<Integer> list : asns){
+//           System.out.println(list);
+//       }
     }
 }

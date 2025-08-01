@@ -16,26 +16,26 @@ public class Ascii {
         subseqAscii(p + (ch+0),up.substring(1));
     }
 
-//    static ArrayList<String> subseqAsciiList(String p, String up){
-//        if(up.isEmpty()){
-//            ArrayList<String> list = new ArrayList<>();
-//            list.add(p);
-//            return list;
-//        }
-//
-//        char ch = up.charAt(0);
-//
-//        ArrayList<String> first = subseqAsciiList(p+ch, up.substring(1));
-//        ArrayList<String> second = subseqAsciiList(p,up.substring(1));
-//        ArrayList<String> third = subseqAsciiList(p + (ch+0),up.substring(1));
-//
-//        second.addAll(third);
-//        first.addAll(second);
-//
-//        return first;
-//    }
+    static ArrayList<String> subseqAsciiList(String p, String up){
+      if(up.isEmpty()){
+          ArrayList<String> list=new ArrayList<>();
+          list.add(p);
+          return list;
+      }
+
+      char ch = up.charAt(0);
+
+      ArrayList<String > first = subseqAsciiList(p+ch,up.substring(1));
+      ArrayList<String > second = subseqAsciiList(p, up.substring(1));
+      ArrayList<String > third = subseqAsciiList(p+ch+0,up.substring(1));
+
+      second.addAll(third);
+      first.addAll(second);
+
+      return first;
+    }
     public static void main(String[] args) {
         subseqAscii("","abc");
-//        System.out.println(subseqAsciiList("","abc"));
+        System.out.println(subseqAsciiList("","abc"));
     }
 }

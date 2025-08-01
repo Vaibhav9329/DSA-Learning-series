@@ -2,7 +2,7 @@ package recursion.backTracking;
 
 public class RevisionNQueen {
     public static void main(String[] args) {
-        int n=8;
+        int n=4;
         boolean[][] board= new boolean[n][n];
         System.out.println(queen(board,0));
     }

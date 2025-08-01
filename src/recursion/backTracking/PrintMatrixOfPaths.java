@@ -11,8 +11,8 @@ public class PrintMatrixOfPaths {
         };
 
         int[][] path = new int [maze.length][maze[0].length];
-        matrixOfAllPath("",maze,0,0,path,1);
-//       matrixOfPath("",maze,0,0);
+//        matrixOfAllPath("",maze,0,0,path,1);
+       matrixOfPath("",maze,0,0);
     }
     public static void matrixOfPath(String p,boolean[][] maze,int r,int c  ){
         if(r == maze.length-1 && c==maze[0].length-1  ){

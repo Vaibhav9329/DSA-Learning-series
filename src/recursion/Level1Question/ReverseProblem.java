@@ -32,7 +32,7 @@ public class ReverseProblem {
 //        return rem * (int)Math.pow(10,digits-1)+helper(n/10,digits-1);
 //    }
     public static void main(String[] args) {
-        System.out.println(reverse(1234,0));
+//        System.out.println(reverse(1234,0));
 //        System.out.println(rev2Method(1234567));
         int n=121;
         if(palin(n,0)){

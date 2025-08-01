@@ -7,18 +7,18 @@ import java.util.List;
 public class IterativeOfNumber {
 
     static List<List<Integer>> subsSetOfInteger(int[] arr){
-    List<List<Integer>> outerlist = new ArrayList<>();
-    outerlist.add(new ArrayList<>());
+        List<List<Integer>>  outerlist = new ArrayList<>();
+        outerlist.add(new ArrayList<>());
 
-    for (int nums : arr){
-        int n = outerlist.size();
-        for(int i=0;i<n;i++){
-            List<Integer> innerlist=new ArrayList<>(outerlist.get(i) );
-            innerlist.add(nums);
-            outerlist.add(innerlist);
+        for(int num : arr){
+            int size = outerlist.size();
+            for(int i=0;i<size;i++){
+                List<Integer> innerlist = new ArrayList<>(outerlist.get(i));
+                innerlist.add(num);
+                outerlist.add(innerlist);
+            }
         }
-    }
-    return outerlist;
+        return outerlist;
     }
 
 
