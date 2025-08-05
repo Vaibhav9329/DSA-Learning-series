@@ -1,4 +1,4 @@
-package StackAndQueue;
+package StackAndQueue.stack;
 
 public class TapWater {
 //        Trapping rain water between '0' and lower numbers
