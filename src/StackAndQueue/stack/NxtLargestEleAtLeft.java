@@ -33,7 +33,7 @@ public class NxtLargestEleAtLeft {
         int[] res = nxtLgstElAtLeft(arr);
 
         for(int no : res){
-            System.out.println(no+" --> ");
+            System.out.print(no+" --> ");
         }
     }
 }
